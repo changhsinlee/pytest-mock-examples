@@ -1,7 +1,17 @@
 # Things to look into
 
-Case 1. 
+Case 1. (done)
 
 function 1 sits in file A that uses a constant imported into A from file B.
 
-How can I mock the constant in function 1 when I call it?
+How can I mock the constant in function 1 when I ed i it?
+
+
+TODOs:
+
+Mock a function output that is imported from another module
+Mock a function output imported from another module and skip the time consuming part of code 
+Mock a class attribute imported from another module 
+Mock a class 
+
+Great link: https://chase-seibert.github.io/blog/2015/06/25/python-mocking-cookbook.html

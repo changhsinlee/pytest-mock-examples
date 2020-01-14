@@ -1,0 +1,1 @@
+CONSTANT_A = 1
