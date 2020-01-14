@@ -1,0 +1,7 @@
+# Things to look into
+
+Case 1. 
+
+function 1 sits in file A that uses a constant imported into A from file B.
+
+How can I mock the constant in function 1 when I call it?
