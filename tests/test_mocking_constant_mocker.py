@@ -5,8 +5,8 @@ from mock_examples.simple_functions import double
 
 
 # note that I'm mocking the module when it is imported, not where CONSTANT_A is from
-@mock.patch('mock_examples.simple_functions.CONSTANT_A', 2)
-def test_mocking_constant_a():
+def test_mocking_constant_a(mocker):
+    mocker.patch.object(mock_examples.simple_functions, 'CONSTANT_A', 2)
     expected = 4
     actual = double()
 
@@ -20,8 +20,8 @@ def test_mocking_constant_a_again():
     assert expected == actual
 
 
-@mock.patch.object(mock_examples.simple_functions, 'CONSTANT_A', 3)
-def test_mocking_constant_a_one_more_time():
+def test_mocking_constant_a_one_more_time(mocker):
+    mocker.patch.object(mock_examples.simple_functions, 'CONSTANT_A', 3)
     expected = 6
     actual = double()
 
