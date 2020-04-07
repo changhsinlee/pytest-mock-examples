@@ -1,5 +1,5 @@
 import pytest
-from mock_examples.sample_script import slow_function
+from mock_examples.sample_script import slow_function, slow_dataset
 
 
 @pytest.mark.skip
@@ -36,3 +36,16 @@ def test_slow_function_mocked_database_api_call(mocker):
     actual = slow_function
     assert expected == actual
 
+
+def test_mocking_class_method(mocker):
+    expected = 'slow data'
+
+    def mock_load(self):
+        self.data = 'slow data'
+
+    mocker.patch.object(
+        'mock_examples.sample_script.Dataset.load_data',
+        mock_load
+    )
+    actual = slow_dataset()
+    assert expected == actual

@@ -1,6 +1,6 @@
 import time
 
-from mock_examples.api_calls import database_call, api_call
+from mock_examples.api_calls import database_call, api_call, Dataset
 
 
 def useful_computation(*args):
@@ -15,3 +15,9 @@ def slow_function():
     # should return 1 + 9 = 10
     output = useful_computation(query_result1, api_result)
     return output
+
+
+def slow_dataset():
+    dataset = Dataset()
+    dataset.load_data()
+    return dataset.data
