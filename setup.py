@@ -5,6 +5,6 @@ setup(name='mock_examples',
       description='Examples for using pytest mock',
       author='Chang Hsin Lee',
       license='MIT',
-      packages=['mock_examples'],
+      packages=['mock_examples', 'pytest', 'pytest-mock'],
       python_requires='>=3.5',
       zip_safe=False)
