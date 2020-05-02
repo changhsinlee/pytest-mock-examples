@@ -11,21 +11,6 @@ def test_mocking_constant_a(mocker):
     assert expected == actual
 
 
-def test_mocking_constant_a_again():
-    expected = 2
-    actual = double()
-
-    assert expected == actual
-
-
-def test_mocking_constant_a_one_more_time(mocker):
-    mocker.patch.object(mock_examples.functions, 'CONSTANT_A', 3)
-    expected = 6
-    actual = double()
-
-    assert expected == actual
-
-
 def test_mocking_constant_twice_in_same_test(mocker):
     mocker.patch.object(mock_examples.functions, 'CONSTANT_A', 3)
     expected_1 = 6

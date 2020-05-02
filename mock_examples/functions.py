@@ -1,4 +1,3 @@
-import time
 from .constants import CONSTANT_A
 
 
