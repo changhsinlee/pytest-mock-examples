@@ -6,7 +6,7 @@ def test_mocking_class_method(mocker):
     expected = 'xyz'
 
     def mock_load(self):
-        self.data = 'xyz'
+        return 'xyz'
 
     mocker.patch(
         'mock_examples.main.Dataset.load_data',

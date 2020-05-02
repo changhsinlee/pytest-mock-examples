@@ -9,5 +9,4 @@ def slow_function():
 
 def slow_dataset():
     dataset = Dataset()
-    dataset.load_data()
-    return dataset.data
+    return dataset.load_data()
