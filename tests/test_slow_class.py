@@ -1,5 +1,4 @@
 from mock_examples.main import slow_dataset
-import mock_examples.main
 
 
 def test_mocking_class_method(mocker):
