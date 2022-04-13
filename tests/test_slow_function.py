@@ -9,12 +9,17 @@ def test_slow_function_super_slow():
     assert expected == actual
 
 
-def test_slow_function_mocked_api_call(mocker):
+@pytest.fixture(autouse=True)
+def test_slow_function_mocked_api_call(mocker, expected):
     mocker.patch(
         'mock_examples.main.api_call',
-        return_value=5
+        return_value=expected
     )
 
-    expected = 5
+@pytest.mark.parametrize(
+    "expected",
+    [(7), (2)],
+)
+def test_slow_function_mocked_api_call_pm(expected):
     actual = slow_function()
     assert expected == actual
